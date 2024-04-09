@@ -1,13 +1,18 @@
 import './App.css';
-import Counter from './components/Counter';
+import Banner from './components/Banner';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import AddProduct from './pages/addProduct/AddProduct';
 
 function App() {
+
   return (
     <div className="App">
       <Header />
-      <Counter />
+      <div className="content-wrapper">
+        <Banner />
+        <AddProduct />
+      </div>
       <Footer />
     </div>
   );
