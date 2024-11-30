@@ -1,7 +1,13 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 .content-wrapper{
   padding-left: 15px;
   padding-right: 15px;
+}
+p {
+  width: 300px;
+  height: 300px;
+  border: 2px solid red;
+  overflow-x: hidden;
 }
