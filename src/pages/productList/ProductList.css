@@ -1,22 +1,50 @@
 .product-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Add spacing between items */
+}
+
+.product-container .product-details {
+  width: 20%; /* Default width for larger screens */
+  padding: 10px;
+  box-sizing: border-box;
+  height: 300px; /* Set the desired height */
+  overflow: hidden;
+  border: 1px solid #ddd; /* Optional: Add a border */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  background-color: #f9f9f9; /* Optional: Add a background color */
+}
+
+.product-container .product-details h2,
+.product-container .product-details p {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 14px; /* Adjust font size for better readability */
+}
+
+.product-container .product-details img {
+  max-width: 100%;
+  height: 70%;
+  object-fit: cover; /* Ensure image fits nicely */
+  margin-bottom: 5px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1024px) {
   .product-container .product-details {
-    width: 20%; /* Four items in a row */
-    padding: 10px;
-    box-sizing: border-box;
-    height: 300px; /* Set the desired height */
-    overflow: hidden;
+    width: 25%; /* Three items in a row on tablets */
   }
-  
-  .product-container .product-details h2,
-  .product-container .product-details p {
-    margin: 0;
+}
+
+@media (max-width: 768px) {
+  .product-container .product-details {
+    width: 50%; /* Two items in a row on smaller tablets */
   }
-  
-  .product-container .product-details img {
-    max-width: 100%;
-    height: 70%;
+}
+
+@media (max-width: 480px) {
+  .product-container .product-details {
+    width: 100%; /* One item per row on mobile devices */
+    height: auto; /* Adjust height dynamically for mobile */
   }
+}
